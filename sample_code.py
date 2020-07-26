@@ -1,5 +1,5 @@
 import speech_recognition as sr
-
+import pyttsx3
 def SpeakText(command):
     """This is a function that convert the text to speech .
 
@@ -27,7 +27,6 @@ def main():
             #energy threshold based on the surrounding noise level
             r.adjust_for_ambient_noise(source)
             print("Say Something")
-            SpeakText("Say Something")
             #listens for the user's input
             audio = r.listen(source)
             try:
